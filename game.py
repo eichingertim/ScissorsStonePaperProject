@@ -48,22 +48,10 @@ def checkwinner(usermove, usermovenum, aimovenum):
     if str(aimovenum) == usermove:
         print("* It's a draw!")
         printgameresult(usermovenum, aimovenum)
-    elif usermovenum == 0 and aimovenum == 1:
+    elif (usermovenum == 0 and aimovenum == 1) or (usermovenum == 1 and aimovenum == 2) or (usermovenum == 2 and aimovenum == 0):
         print("* AI  won!")
         printgameresult(usermovenum, aimovenum)
-    elif usermovenum == 0 and aimovenum == 2:
-        print("* You  won!")
-        printgameresult(usermovenum, aimovenum)
-    elif usermovenum == 1 and aimovenum == 0:
-        print("* You  won!")
-        printgameresult(usermovenum, aimovenum)
-    elif usermovenum == 1 and aimovenum == 2:
-        print("* AI  won!")
-        printgameresult(usermovenum, aimovenum)
-    elif usermovenum == 2 and aimovenum == 0:
-        print("* AI  won!")
-        printgameresult(usermovenum, aimovenum)
-    elif usermovenum == 2 and aimovenum == 1:
+    else:
         print("* You  won!")
         printgameresult(usermovenum, aimovenum)
     print("-----------------------------------------\n")
